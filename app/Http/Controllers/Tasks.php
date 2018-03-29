@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Task;
+use App\Http\Requests\TaskRequest;
 
 use Illuminate\Http\Request;
 
@@ -23,7 +24,7 @@ class Tasks extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
         $data = $request->only(['task', 'completed']);
 
@@ -49,7 +50,7 @@ class Tasks extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Task $task)
+    public function update(TaskRequest $request, Task $task)
     {
 
         $data= $request->only(["task"]);
