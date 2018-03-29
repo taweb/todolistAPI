@@ -1,2 +1,2 @@
 # todolistAPI
-api part of to do list
+api part of to do list.
